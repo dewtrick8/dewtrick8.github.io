@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>今日大赛在线观看-大赛直播在线观看_今日赛事直播入口</title>
+<meta name="description" content="今日大赛在线观看主题首页，汇总今日大赛的在线观看入口、直播时段与回放安排，帮助观众快速找到正在进行的比赛并了解观看方式。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230f172a'/%3E%3Ccircle cx='32' cy='32' r='15' fill='none' stroke='%23f97316' stroke-width='4'/%3E%3Cpath d='M27 24l14 8-14 8z' fill='%23f97316'/%3E%3C/svg%3E">
+<style>
+:root{
+  --ink:#0f172a;
+  --ink-soft:#334155;
+  --muted:#64748b;
+  --line:#e2e8f0;
+  --bg:#f6f8fb;
+  --card:#ffffff;
+  --accent:#f97316;
+  --accent-deep:#ea580c;
+  --navy:#111c33;
+  --radius:16px;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans SC",system-ui,sans-serif;
+  background:var(--bg);
+  color:var(--ink);
+  line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:inherit;text-decoration:none;}
+img,svg{display:block;max-width:100%;}
+.wrap{width:min(1120px,92vw);margin:0 auto;}
+
+/* header */
+.site-head{
+  position:sticky;top:0;z-index:50;
+  background:rgba(255,255,255,.92);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--line);
+}
+.head-inner{
+  display:flex;align-items:center;gap:28px;
+  min-height:68px;
+}
+.brand{display:flex;align-items:center;gap:10px;flex-shrink:0;}
+.brand-mark{
+  width:38px;height:38px;border-radius:11px;
+  background:var(--navy);
+  display:grid;place-items:center;
+}
+.brand-name{
+  font-size:17px;font-weight:800;letter-spacing:.3px;color:var(--navy);
+  white-space:nowrap;
+}
+.nav{display:flex;gap:22px;margin-left:auto;flex-wrap:wrap;}
+.nav a{
+  font-size:14.5px;color:var(--ink-soft);font-weight:500;
+  padding:6px 0;border-bottom:2px solid transparent;
+  transition:color .2s,border-color .2s;
+}
+.nav a:hover{color:var(--accent-deep);border-color:var(--accent);}
+.nav a.cta{
+  background:var(--accent);color:#fff;border-radius:999px;
+  padding:8px 18px;font-weight:700;border-bottom:none;
+}
+.nav a.cta:hover{background:var(--accent-deep);color:#fff;}
+
+/* hero */
+.hero{
+  background:linear-gradient(160deg,#0f172a 0%,#15233f 55%,#1b2c4d 100%);
+  color:#e8eefb;
+  padding:64px 0 56px;
+  position:relative;overflow:hidden;
+}
+.hero::after{
+  content:"";position:absolute;right:-90px;top:-70px;
+  width:340px;height:340px;border-radius:50%;
+  background:radial-gradient(circle,rgba(249,115,22,.28),transparent 68%);
+}
+.hero-inner{position:relative;z-index:2;max-width:760px;}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:13px;letter-spacing:1px;color:#fbbf24;
+  border:1px solid rgba(251,191,36,.4);
+  border-radius:999px;padding:5px 14px;margin-bottom:22px;
+}
+.dot-live{
+  width:7px;height:7px;border-radius:50%;background:#f97316;
+  box-shadow:0 0 0 0 rgba(249,115,22,.7);
+  animation:pulse 1.8s infinite;
+}
+@keyframes pulse{
+  0%{box-shadow:0 0 0 0 rgba(249,115,22,.6);}
+  70%{box-shadow:0 0 0 9px rgba(249,115,22,0);}
+  100%{box-shadow:0 0 0 0 rgba(249,115,22,0);}
+}
+.hero h1{
+  font-size:clamp(28px,4.6vw,46px);
+  line-height:1.25;font-weight:900;letter-spacing:.5px;
+  margin-bottom:18px;
+}
+.hero p.lead{
+  font-size:16px;color:#c3cee3;max-width:640px;margin-bottom:30px;
+}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap;align-items:center;}
+.btn-primary{
+  background:var(--accent);color:#fff;font-weight:700;font-size:15px;
+  padding:13px 28px;border-radius:999px;
+  display:inline-flex;align-items:center;gap:8px;
+  transition:background .2s,transform .2s;
+}
+.btn-primary:hover{background:var(--accent-deep);transform:translateY(-1px);}
+.btn-ghost{
+  border:1px solid rgba(255,255,255,.35);color:#e8eefb;
+  padding:12px 24px;border-radius:999px;font-size:15px;font-weight:500;
+  transition:border-color .2s,background .2s;
+}
+.btn-ghost:hover{border-color:#fff;background:rgba(255,255,255,.08);}
+.hero-meta{
+  display:flex;gap:26px;flex-wrap:wrap;margin-top:36px;
+  font-size:13.5px;color:#94a3b8;border-top:1px solid rgba(255,255,255,.12);
+  padding-top:18px;
+}
+.hero-meta strong{color:#f8fafc;font-weight:700;}
+
+/* section common */
+section{padding:56px 0;}
+.sec-head{margin-bottom:30px;}
+.sec-kicker{
+  font-size:13px;font-weight:700;letter-spacing:1.5px;color:var(--accent-deep);
+  text-transform:uppercase;margin-bottom:8px;
+}
+.sec-head h2{
+  font-size:clamp(21px,2.6vw,27px);font-weight:800;color:var(--navy);
+  letter-spacing:.3px;
+}
+.sec-head p{color:var(--muted);font-size:15px;margin-top:8px;max-width:720px;}
+
+/* schedule */
+.schedule-list{display:flex;flex-direction:column;gap:14px;}
+.sched-item{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  padding:20px 24px;display:flex;align-items:center;gap:20px;
+  transition:border-color .2s,box-shadow .2s;
+}
+.sched-item:hover{border-color:#c7d2e3;box-shadow:0 6px 22px rgba(15,23,42,.06);}
+.sched-time{
+  min-width:88px;text-align:center;flex-shrink:0;
+}
+.sched-time .t{font-size:19px;font-weight:800;color:var(--navy);letter-spacing:.5px;}
+.sched-time .s{font-size:12px;color:var(--muted);}
+.sched-body{flex:1;min-width:0;}
+.sched-body h3{font-size:16px;font-weight:700;margin-bottom:4px;}
+.sched-body p{font-size:13.5px;color:var(--muted);}
+.tag{
+  display:inline-block;font-size:12px;font-weight:600;
+  padding:3px 10px;border-radius:999px;margin-left:2px;
+}
+.tag-live{background:#fff1e6;color:var(--accent-deep);}
+.tag-soon{background:#eef2ff;color:#4338ca;}
+.tag-replay{background:#ecfdf5;color:#047857;}
+.sched-link{
+  font-size:14px;font-weight:700;color:var(--accent-deep);
+  white-space:nowrap;flex-shrink:0;
+}
+.sched-link:hover{text-decoration:underline;}
+
+/* cards grid */
+.grid-3{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:20px;
+}
+.card{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  padding:26px 24px;display:flex;flex-direction:column;gap:12px;
+  transition:border-color .2s,transform .2s,box-shadow .2s;
+}
+.card:hover{border-color:#c7d2e3;transform:translateY(-3px);box-shadow:0 10px 28px rgba(15,23,42,.07);}
+.card-ico{
+  width:44px;height:44px;border-radius:12px;
+  background:#fff1e6;display:grid;place-items:center;
+}
+.card h3{font-size:17px;font-weight:800;color:var(--navy);}
+.card p{font-size:14px;color:var(--ink-soft);}
+.card .more{
+  margin-top:auto;font-size:13.5px;font-weight:700;color:var(--accent-deep);
+}
+
+/* filter */
+.filter-bar{
+  display:flex;gap:10px;flex-wrap:wrap;margin-bottom:24px;
+}
+.chip{
+  border:1px solid var(--line);background:#fff;color:var(--ink-soft);
+  font-size:14px;font-weight:600;padding:8px 18px;border-radius:999px;
+  cursor:pointer;transition:all .2s;font-family:inherit;
+}
+.chip:hover{border-color:var(--accent);color:var(--accent-deep);}
+.chip.active{background:var(--navy);border-color:var(--navy);color:#fff;}
+.filter-note{font-size:13.5px;color:var(--muted);margin-top:14px;}
+.filter-empty{
+  display:none;background:#fff;border:1px dashed #cbd5e1;border-radius:var(--radius);
+  padding:30px;text-align:center;color:var(--muted);font-size:14.5px;
+}
+
+/* article area */
+.article-wrap{
+  background:var(--card);border:1px solid var(--line);border-radius:20px;
+  padding:38px clamp(22px,4vw,48px);
+}
+.article-wrap h2{
+  font-size:clamp(20px,2.4vw,25px);font-weight:800;color:var(--navy);margin-bottom:18px;
+}
+.article-wrap h3{
+  font-size:17px;font-weight:800;color:var(--navy);margin:26px 0 8px;
+}
+.article-wrap p{font-size:15px;color:var(--ink-soft);margin-bottom:12px;}
+.article-wrap ul{margin:6px 0 14px 20px;}
+.article-wrap li{font-size:15px;color:var(--ink-soft);margin-bottom:7px;}
+
+/* download */
+.dl-band{
+  background:linear-gradient(120deg,#111c33,#1e2f52);
+  border-radius:20px;padding:38px clamp(24px,4vw,48px);
+  color:#e8eefb;display:flex;align-items:center;gap:32px;flex-wrap:wrap;
+}
+.dl-band .txt{flex:1;min-width:260px;}
+.dl-band h2{font-size:22px;font-weight:800;margin-bottom:8px;}
+.dl-band p{font-size:14.5px;color:#aebbd2;max-width:560px;}
+.btn-dl{
+  display:inline-flex;align-items:center;gap:9px;
+  background:var(--accent);color:#fff;font-weight:800;font-size:15px;
+  padding:14px 32px;border-radius:999px;
+  pointer-events:none;opacity:.95;
+}
+.dl-hint{font-size:12.5px;color:#8fa0bd;margin-top:10px;}
+
+/* footer */
+.site-foot{
+  background:#0b1220;color:#94a3b8;padding:44px 0 30px;margin-top:20px;
+}
+.foot-top{
+  display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap;
+  padding-bottom:26px;border-bottom:1px solid rgba(255,255,255,.09);
+}
+.foot-brand{display:flex;align-items:center;gap:10px;}
+.foot-brand .brand-name{color:#fff;font-size:16px;}
+.foot-links{display:flex;gap:24px;flex-wrap:wrap;font-size:14px;}
+.foot-links a:hover{color:#fff;}
+.foot-bottom{padding-top:20px;font-size:12.5px;color:#64748b;line-height:1.9;}
+.foot-bottom strong{color:#cbd5e1;font-weight:600;}
+
+@media(max-width:900px){
+  .grid-3{grid-template-columns:1fr 1fr;}
+}
+@media(max-width:720px){
+  .head-inner{min-height:60px;gap:14px;flex-wrap:wrap;padding:10px 0;}
+  .nav{gap:14px;margin-left:0;width:100%;}
+  .nav a{font-size:13.5px;}
+  .hero{padding:44px 0 40px;}
+  .hero-actions{gap:10px;}
+  .btn-primary,.btn-ghost{padding:11px 20px;font-size:14px;}
+  .hero-meta{gap:16px;font-size:12.5px;}
+  section{padding:40px 0;}
+  .sched-item{flex-wrap:wrap;gap:12px;padding:16px 18px;}
+  .sched-time{min-width:auto;text-align:left;display:flex;align-items:baseline;gap:8px;}
+  .sched-link{margin-left:auto;}
+  .grid-3{grid-template-columns:1fr;}
+  .article-wrap{padding:26px 20px;}
+  .dl-band{padding:28px 22px;}
+}
+</style>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<header class="site-head">
+  <div class="wrap head-inner">
+    <a class="brand" href="#top" aria-label="今日大赛在线观看首页">
+      <span class="brand-mark" aria-hidden="true">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+          <circle cx="12" cy="12" r="8.5" stroke="#f97316" stroke-width="2"/>
+          <path d="M10 8.5l6 3.5-6 3.5z" fill="#f97316"/>
+        </svg>
+      </span>
+      <span class="brand-name">今日大赛在线观看</span>
+    </a>
+    <nav class="nav" aria-label="主导航">
+      <a href="#live">正在直播</a>
+      <a href="#schedule">今日赛程</a>
+      <a href="#guide">观看方式</a>
+      <a href="#faq">常见问题</a>
+      <a class="cta" href="#live">进入直播</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="wrap hero-inner">
+      <span class="eyebrow"><span class="dot-live" aria-hidden="true"></span>今日直播入口已开放</span>
+      <h1>今日大赛在线观看</h1>
+      <p class="lead">把今天开赛的场次集中在一页：直播入口、开赛时间与回放去向都能在这里找到。想进行今日大赛在线观看，先看时段，再点对应场次的观看按钮即可。</p>
+      <div class="hero-actions">
+        <a class="btn-primary" href="#live">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M8 5.5l11 6.5-11 6.5z" fill="#fff"/>
+          </svg>
+          进入今日直播
+        </a>
+        <a class="btn-ghost" href="#schedule">查看今日赛程</a>
+      </div>
+      <div class="hero-meta">
+        <span>场次安排 <strong>按开赛时间排序</strong></span>
+        <span>直播状态 <strong>实时标注</strong></span>
+        <span>回放 <strong>赛后同步</strong></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 正在直播 -->
+  <section id="live">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sec-kicker">Live Now</div>
+        <h2>正在直播的今日大赛</h2>
+        <p>下列场次标注了当前状态，直播中的可直接进入观看页，未开赛的显示预计开始时间。今日大赛在线观看的入口与场次一一对应，避免点错。</p>
+      </div>
+
+      <div class="schedule-list">
+        <article class="sched-item">
+          <div class="sched-time">
+            <div class="t">10:00</div>
+            <div class="s">小组赛</div>
+          </div>
+          <div class="sched-body">
+            <h3>上午场对决 <span class="tag tag-live">直播中</span></h3>
+            <p>赛程已进入中段，直播画面与解说同步开放。</p>
+          </div>
+          <a class="sched-link" href="#guide">观看入口 →</a>
+        </article>
+
+        <article class="sched-item">
+          <div class="sched-time">
+            <div class="t">14:30</div>
+            <div class="s">八强席位</div>
+          </div>
+          <div class="sched-body">
+            <h3>下午焦点场 <span class="tag tag-soon">即将开始</span></h3>
+            <p>开赛前十分钟开放直播间，建议提前进入等待。</p>
+          </div>
+          <a class="sched-link" href="#guide">预约提醒 →</a>
+        </article>
+
+        <article class="sched-item">
+          <div class="sched-time">
+            <div class="t">19:30</div>
+            <div class="s">半决赛</div>
+          </div>
+          <div class="sched-body">
+            <h3>晚间主赛 <span class="tag tag-soon">待开赛</span></h3>
+            <p>今日大赛在线观看的高峰时段，建议提前清理网络环境。</p>
+          </div>
+          <a class="sched-link" href="#guide">观看入口 →</a>
+        </article>
+
+        <article class="sched-item">
+          <div class="sched-time">
+            <div class="t">21:40</div>
+            <div class="s">赛后</div>
+          </div>
+          <div class="sched-body">
+            <h3>全场回放 <span class="tag tag-replay">回放</span></h3>
+            <p>主赛结束后开放回放，错过直播可按场次补看。</p>
+          </div>
+          <a class="sched-link" href="#guide">回放通道 →</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 今日赛程 -->
+  <section id="schedule" style="background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line);">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sec-kicker">Schedule</div>
+        <h2>今日赛程一览</h2>
+        <p>按场次类型筛选，快速定位自己关心的对决。今日大赛在线观看的赛程以开赛时间为唯一排序依据，信息保持简洁。</p>
+      </div>
+
+      <div class="filter-bar" role="group" aria-label="赛程筛选">
+        <button class="chip active" type="button" data-filter="all">全部场次</button>
+        <button class="chip" type="button" data-filter="group">小组赛</button>
+        <button class="chip" type="button" data-filter="knockout">淘汰赛</button>
+        <button class="chip" type="button" data-filter="final">决赛</button>
+      </div>
+
+      <div class="schedule-list" id="schedFilterList">
+        <article class="sched-item" data-type="group">
+          <div class="sched-time"><div class="t">10:00</div><div class="s">小组赛</div></div>
+          <div class="sched-body"><h3>A 组首场</h3><p>循环赛阶段，积分直接影响出线形势。</p></div>
+          <a class="sched-link" href="#guide">观看 →</a>
+        </article>
+        <article class="sched-item" data-type="group">
+          <div class="sched-time"><div class="t">11:20</div><div class="s">小组赛</div></div>
+          <div class="sched-body"><h3>B 组首场</h3><p>同组两支队伍首次交手，节奏通常偏快。</p></div>
+          <a class="sched-link" href="#guide">观看 →</a>
+        </article>
+        <article class="sched-item" data-type="knockout">
+          <div class="sched-time"><div class="t">14:30</div><div class="s">八强</div></div>
+          <div class="sched-body"><h3>八强第一场</h3><p>单场淘汰，落败即结束本次征程。</p></div>
+          <a class="sched-link" href="#guide">观看 →</a>
+        </article>
+        <article class="sched-item" data-type="knockout">
+          <div class="sched-time"><div class="t">16:10</div><div class="s">八强</div></div>
+          <div class="sched-body"><h3>八强第二场</h3><p>与上一场间隔较短，适合连续观看。</p></div>
+          <a class="sched-link" href="#guide">观看 →</a>
+        </article>
+        <article class="sched-item" data-type="final">
+          <div class="sched-time"><div class="t">19:30</div><div class="s">半决赛</div></div>
+          <div class="sched-body"><h3>半决赛上半区</h3><p>胜者进入最终对决，赛制为多局决胜。</p></div>
+          <a class="sched-link" href="#guide">观看 →</a>
+        </article>
+        <article class="sched-item" data-type="final">
+          <div class="sched-time"><div class="t">21:40</div><div class="s">决赛</div></div>
+          <div class="sched-body"><h3>今日主赛决赛</h3><p>当天最后一场，结束后开放完整回放。</p></div>
+          <a class="sched-link" href="#guide">观看 →</a>
+        </article>
+      </div>
+
+      <div class="filter-empty" id="schedEmpty">当前筛选下暂无场次，切换其他分类即可查看。</div>
+      <p class="filter-note" id="filterNote">共显示 6 个场次。</p>
+    </div>
+  </section>
+
+  <!-- 观看方式 -->
+  <section id="guide">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sec-kicker">How to Watch</div>
+        <h2>完成今日大赛在线观看的三个步骤</h2>
+        <p>观看流程并不复杂，关键是选对场次、确认时段、进入对应直播间。下面把每一步拆开说明。</p>
+      </div>
+
+      <div class="grid-3">
+        <div class="card">
+          <div class="card-ico" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+              <rect x="3.5" y="5" width="17" height="14" rx="2.5" stroke="#ea580c" stroke-width="2"/>
+              <path d="M3.5 9.5h17" stroke="#ea580c" stroke-width="2"/>
+            </svg>
+          </div>
+          <h3>选场次</h3>
+          <p>先看今日赛程里的开赛时间与场次类型，确定要看哪一场。同一时间有多场时，按自己关心的对阵选择。</p>
+          <a class="more" href="#schedule">回到赛程 →</a>
+        </div>
+
+        <div class="card">
+          <div class="card-ico" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+              <circle cx="12" cy="12" r="8" stroke="#ea580c" stroke-width="2"/>
+              <path d="M12 7.5V12l3 2" stroke="#ea580c" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3>对时间</h3>
+          <p>开赛前十分钟进入直播间最稳妥，既能避开拥挤，也能确认画面是否正常。晚间场次建议更早准备。</p>
+          <a class="more" href="#live">查看直播中 →</a>
+        </div>
+
+        <div class="card">
+          <div class="card-ico" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+              <path d="M5 12.5l4.5 4.5L19 7.5" stroke="#ea580c" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h3>稳观看</h3>
+          <p>优先使用有线或稳定 Wi-Fi；画面卡顿时先降低清晰度，再切换线路。今日大赛在线观看的流畅度很大程度取决于本地网络。</p>
+          <a class="more" href="#faq">常见问题 →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 正文说明 -->
+  <section id="about" style="padding-top:0;">
+    <div class="wrap">
+      <div class="article-wrap">
+        <h2>关于今日大赛在线观看的说明</h2>
+        <p>今日大赛在线观看，指的是把当天进行的比赛集中起来、按时间顺序提供给观众的一种观看方式。它的核心不在“多”，而在“准”：观众需要知道哪一场现在正在播、哪一场还没开始、哪一场已经结束但可以补看。本页把这三类状态分别标出，正是为了让今日大赛在线观看这件事少一些来回翻找。</p>
+
+        <h3>赛程为什么按时间排</h3>
+        <p>比赛日里场次密集，观众最常问的是“现在能看什么”和“下一场几点”。按开赛时间排序，能同时回答这两个问题：列表上方的场次已经或即将开始，下方则是晚些时候的对决。今日大赛在线观看的体验，很大程度上取决于赛程是否清晰可读，而不是信息堆得有多少。</p>
+
+        <h3>直播、回放与状态标注</h3>
+        <p>直播中的场次会标注“直播中”，未开始的标注“即将开始”或“待开赛”，结束后的场次转入回放通道。三种状态对应的入口不同，点之前先看一眼标签，可以避免点进还没开始的房间空等。回放通常在比赛结束后整理，不保证与直播同步上线，具体以对应场次页面显示为准。</p>
+
+        <h3>观看前值得确认的几件事</h3>
+        <ul>
+          <li>确认设备时间准确，避免因时区或系统时间偏差错过开赛。</li>
+          <li>晚间场次观众较多，提前进入可减少排队和加载等待。</li>
+          <li>若使用移动网络，注意流量消耗，长时间观看建议切换 Wi-Fi。</li>
+          <li>画面异常时先刷新页面，再尝试切换清晰度或备用线路。</li>
+        </ul>
+        <p>以上几点看似琐碎，却直接影响今日大赛在线观看是否顺畅。与其在开赛后手忙脚乱地排查，不如在赛前两分钟完成检查。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" style="padding-top:0;">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sec-kicker">FAQ</div>
+        <h2>常见问题</h2>
+        <p>关于今日大赛在线观看，观众问得最多的几个问题，集中回答如下。</p>
+      </div>
+
+      <div class="grid-3">
+        <div class="card">
+          <h3>错过直播怎么办？</h3>
+          <p>赛后可进入对应场次的回放通道补看。回放上线时间以场次页面为准，多数主赛会在结束后不久提供。</p>
+        </div>
+        <div class="card">
+          <h3>同时有几场直播怎么选？</h3>
+          <p>按自己关注的对阵优先级选择，其余场次可在结束后通过回放补齐，不必同时开着多个窗口。</p>
+        </div>
+        <div class="card">
+          <h3>画面卡顿如何处理？</h3>
+          <p>先降低清晰度，再刷新页面；若仍不顺畅，切换到备用线路。本地网络不稳定是最常见原因。</p>
+        </div>
+        <div class="card">
+          <h3>赛程会临时调整吗？</h3>
+          <p>可能。场次时间以当日实际安排为准，开赛前建议再看一眼赛程列表的最新状态。</p>
+        </div>
+        <div class="card">
+          <h3>手机能看吗？</h3>
+          <p>可以。页面适配手机屏幕，直播间同样支持移动端观看，注意保持网络稳定。</p>
+        </div>
+        <div class="card">
+          <h3>需要提前预约吗？</h3>
+          <p>部分场次提供开赛提醒，预约后可在开赛前收到提示；不预约也可在开赛后直接进入直播间。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Download -->
+  <section style="padding-top:0;">
+    <div class="wrap">
+      <div class="dl-band">
+        <div class="txt">
+          <h2>下载今日大赛在线观看赛程表</h2>
+          <p>把当日场次、开赛时间与观看入口整理成一份本地文件，方便离线查看与转发给同看的朋友。文件内容与页面上方赛程保持一致。</p>
+          <p class="dl-hint">下载入口正在准备中，开放后可直接获取。</p>
+        </div>
+        <a class="btn-dl" href="#" data-download-placeholder="true" aria-disabled="true" tabindex="-1">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M12 4v10m0 0l-4-4m4 4l4-4M5 19h14" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          下载
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <span class="brand-mark" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+            <circle cx="12" cy="12" r="8.5" stroke="#f97316" stroke-width="2"/>
+            <path d="M10 8.5l6 3.5-6 3.5z" fill="#f97316"/>
+          </svg>
+        </span>
+        <span class="brand-name">今日大赛在线观看</span>
+      </div>
+      <nav class="foot-links" aria-label="页尾导航">
+        <a href="#live">正在直播</a>
+        <a href="#schedule">今日赛程</a>
+        <a href="#guide">观看方式</a>
+        <a href="#faq">常见问题</a>
+      </nav>
+    </div>
+    <div class="foot-bottom">
+      <p><strong>今日大赛在线观看</strong>是一个围绕当日比赛观看需求组织的主题页面，内容涵盖直播入口、赛程时段、回放去向与观看提示。场次信息以实际安排为准，页面会随比赛日更新。</p>
+      <p>本站不提供赛事结果的预测，也不对具体对阵胜负作出判断。观看体验受网络与设备影响，遇到问题可先参考常见问题区域。</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var chips = document.querySelectorAll('.chip');
+  var items = document.querySelectorAll('#schedFilterList .sched-item');
+  var empty = document.getElementById('schedEmpty');
+  var note = document.getElementById('filterNote');
+
+  function apply(filter){
+    var shown = 0;
+    items.forEach(function(el){
+      var match = (filter === 'all') || (el.getAttribute('data-type') === filter);
+      el.style.display = match ? '' : 'none';
+      if(match) shown++;
+    });
+    if(shown === 0){
+      empty.style.display = 'block';
+      note.textContent = '当前筛选下暂无场次。';
+    } else {
+      empty.style.display = 'none';
+      note.textContent = '共显示 ' + shown + ' 个场次。';
+    }
+  }
+
+  chips.forEach(function(btn){
+    btn.addEventListener('click', function(){
+      chips.forEach(function(b){ b.classList.remove('active'); });
+      btn.classList.add('active');
+      apply(btn.getAttribute('data-filter'));
+    });
+  });
+})();
+</script>
+
+</body>
+</html>
