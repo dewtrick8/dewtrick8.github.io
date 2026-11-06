@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>风车动漫-风车动漫在线观看_动漫追番新番入口</title>
+<meta name="description" content="风车动漫是一个面向动漫爱好者的在线观看与追番入口，汇集新番、经典番剧与剧场版，按类型与季度分类，帮助你快速找到想看的动漫并持续追更。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%23f4f7fb'/%3E%3Cpath d='M32 32 L32 8 A24 24 0 0 1 56 32 Z' fill='%232f6fed'/%3E%3Cpath d='M32 32 L56 32 A24 24 0 0 1 32 56 Z' fill='%23ff8a3d'/%3E%3Cpath d='M32 32 L32 56 A24 24 0 0 1 8 32 Z' fill='%232f6fed'/%3E%3Cpath d='M32 32 L8 32 A24 24 0 0 1 32 8 Z' fill='%23ff8a3d'/%3E%3Ccircle cx='32' cy='32' r='5' fill='%231d2433'/%3E%3C/svg%3E">
+<style>
+  :root{
+    --ink:#1d2433;
+    --ink-soft:#4a5568;
+    --line:#e2e8f2;
+    --bg:#f6f8fc;
+    --card:#ffffff;
+    --brand:#2f6fed;
+    --brand-soft:#e8efff;
+    --accent:#ff8a3d;
+    --accent-soft:#fff1e6;
+    --radius:16px;
+  }
+  *{box-sizing:border-box;}
+  html{-webkit-text-size-adjust:100%;}
+  body{
+    margin:0;
+    font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,-apple-system,"Segoe UI",sans-serif;
+    color:var(--ink);
+    background:var(--bg);
+    line-height:1.75;
+    font-size:16px;
+  }
+  a{color:inherit;text-decoration:none;}
+  img,svg{display:block;max-width:100%;}
+  .wrap{width:100%;max-width:1120px;margin:0 auto;padding:0 20px;}
+
+  /* Header */
+  header.site{
+    position:sticky;top:0;z-index:20;
+    background:rgba(246,248,252,.92);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line);
+  }
+  .head-inner{
+    display:flex;align-items:center;gap:18px;
+    padding:12px 20px;max-width:1120px;margin:0 auto;
+  }
+  .logo{display:flex;align-items:center;gap:10px;flex:0 0 auto;}
+  .logo-text{
+    font-size:19px;font-weight:800;letter-spacing:.5px;
+    color:var(--ink);white-space:nowrap;
+  }
+  nav.main{display:flex;gap:4px;margin-left:auto;flex-wrap:wrap;}
+  nav.main a{
+    font-size:14.5px;color:var(--ink-soft);
+    padding:6px 11px;border-radius:999px;
+    transition:background .2s,color .2s;
+  }
+  nav.main a:hover,nav.main a:focus-visible{background:var(--brand-soft);color:var(--brand);}
+  .nav-toggle{display:none;}
+
+  /* Hero */
+  .hero{padding:44px 0 30px;}
+  .hero-grid{
+    display:grid;grid-template-columns:1.15fr .85fr;gap:36px;align-items:center;
+  }
+  .badge{
+    display:inline-flex;align-items:center;gap:7px;
+    background:var(--accent-soft);color:#c2591a;
+    font-size:13px;font-weight:600;
+    padding:5px 12px;border-radius:999px;
+    margin-bottom:16px;
+  }
+  h1{
+    font-size:38px;line-height:1.25;margin:0 0 14px;
+    letter-spacing:-.5px;font-weight:800;
+  }
+  .hero p.lead{
+    font-size:16.5px;color:var(--ink-soft);margin:0 0 22px;max-width:33em;
+  }
+  .actions{display:flex;gap:12px;flex-wrap:wrap;align-items:center;}
+  .btn{
+    display:inline-flex;align-items:center;gap:8px;
+    font-size:15px;font-weight:600;
+    padding:11px 22px;border-radius:12px;
+    transition:transform .15s,box-shadow .2s,background .2s;
+  }
+  .btn-primary{background:var(--brand);color:#fff;box-shadow:0 8px 20px rgba(47,111,237,.26);}
+  .btn-primary:hover{background:#245cd0;transform:translateY(-1px);}
+  .btn-ghost{background:#fff;color:var(--ink);border:1px solid var(--line);}
+  .btn-ghost:hover{border-color:#c3cfe4;}
+  .btn[aria-disabled="true"]{
+    opacity:.55;pointer-events:none;cursor:default;box-shadow:none;
+  }
+  .hero-art{
+    background:linear-gradient(150deg,#eaf0ff 0%,#fff4ea 100%);
+    border-radius:26px;padding:26px;
+    border:1px solid #e6ecf9;
+  }
+  .hero-art figcaption{
+    font-size:13px;color:var(--ink-soft);margin-top:14px;text-align:center;
+  }
+
+  /* Section base */
+  section{padding:34px 0;}
+  .sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;margin-bottom:20px;flex-wrap:wrap;}
+  h2{font-size:23px;margin:0;font-weight:800;letter-spacing:-.2px;}
+  .sec-head p{margin:6px 0 0;color:var(--ink-soft);font-size:14.5px;max-width:46em;}
+  .sec-head .more{font-size:14px;color:var(--brand);font-weight:600;white-space:nowrap;}
+
+  /* Filter */
+  .filter-bar{
+    background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+    padding:16px 18px;display:flex;gap:14px;flex-wrap:wrap;align-items:center;
+    margin-bottom:22px;
+  }
+  .filter-bar label{font-size:14px;color:var(--ink-soft);font-weight:600;}
+  .filter-bar input[type="search"]{
+    flex:1 1 220px;min-width:0;
+    font:inherit;font-size:14.5px;
+    padding:9px 14px;border-radius:10px;
+    border:1px solid var(--line);background:#fbfcff;color:var(--ink);
+    outline:none;
+  }
+  .filter-bar input[type="search"]:focus{border-color:var(--brand);box-shadow:0 0 0 3px rgba(47,111,237,.14);}
+  .chips{display:flex;gap:8px;flex-wrap:wrap;}
+  .chip{
+    font-size:13.5px;padding:6px 13px;border-radius:999px;
+    border:1px solid var(--line);background:#fff;color:var(--ink-soft);
+    cursor:pointer;font-family:inherit;transition:.2s;
+  }
+  .chip:hover{border-color:#bfcde6;}
+  .chip.active{background:var(--brand);border-color:var(--brand);color:#fff;}
+
+  /* Cards */
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
+  .card{
+    background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+    padding:20px;display:flex;flex-direction:column;gap:10px;
+    transition:transform .18s,box-shadow .22s,border-color .2s;
+  }
+  .card:hover{transform:translateY(-3px);box-shadow:0 14px 30px rgba(29,36,51,.08);border-color:#d3ddef;}
+  .card .tag{
+    align-self:flex-start;font-size:12px;font-weight:700;
+    background:var(--brand-soft);color:var(--brand);
+    padding:3px 10px;border-radius:6px;letter-spacing:.3px;
+  }
+  .card .tag.orange{background:var(--accent-soft);color:#c2591a;}
+  .card h3{font-size:17px;margin:0;font-weight:700;line-height:1.45;}
+  .card p{margin:0;font-size:14.5px;color:var(--ink-soft);}
+  .card .meta{font-size:13px;color:#8a95a8;margin-top:auto;padding-top:8px;border-top:1px dashed var(--line);}
+  .empty-note{
+    display:none;font-size:14.5px;color:var(--ink-soft);
+    background:#fff;border:1px dashed var(--line);border-radius:12px;padding:16px 18px;
+  }
+
+  /* Guide */
+  .guide{
+    display:grid;grid-template-columns:repeat(3,1fr);gap:18px;
+  }
+  .guide article{
+    background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+    padding:22px;
+  }
+  .guide .num{
+    width:30px;height:30px;border-radius:9px;
+    display:flex;align-items:center;justify-content:center;
+    background:var(--brand);color:#fff;font-size:14px;font-weight:800;
+    margin-bottom:12px;
+  }
+  .guide h3{font-size:16.5px;margin:0 0 8px;font-weight:700;}
+  .guide p{margin:0;font-size:14.5px;color:var(--ink-soft);}
+
+  /* FAQ */
+  .faq{display:grid;gap:12px;}
+  details{
+    background:var(--card);border:1px solid var(--line);border-radius:12px;
+    padding:0 18px;
+  }
+  details[open]{border-color:#cfdcf2;}
+  summary{
+    cursor:pointer;list-style:none;
+    font-size:15.5px;font-weight:700;
+    padding:15px 0;display:flex;justify-content:space-between;gap:12px;align-items:center;
+  }
+  summary::-webkit-details-marker{display:none;}
+  summary::after{
+    content:"+";font-size:19px;color:var(--brand);font-weight:600;line-height:1;flex:0 0 auto;
+  }
+  details[open] summary::after{content:"–";}
+  details p{margin:0 0 16px;font-size:14.5px;color:var(--ink-soft);}
+
+  /* Closing */
+  .closing{
+    background:linear-gradient(135deg,#1d2433 0%,#2b3a5c 100%);
+    color:#e9eefb;border-radius:22px;padding:34px 30px;
+    display:flex;gap:24px;align-items:center;justify-content:space-between;flex-wrap:wrap;
+  }
+  .closing h2{color:#fff;font-size:21px;}
+  .closing p{margin:8px 0 0;font-size:14.5px;color:#b9c6e0;max-width:40em;}
+  .closing .btn-primary{background:#fff;color:#1d2433;box-shadow:none;}
+  .closing .btn-primary:hover{background:#eaf0ff;}
+
+  /* Footer */
+  footer.site{
+    border-top:1px solid var(--line);margin-top:20px;
+    padding:28px 0 36px;font-size:14px;color:var(--ink-soft);
+  }
+  .foot-inner{display:flex;gap:24px;justify-content:space-between;flex-wrap:wrap;align-items:flex-start;}
+  .foot-brand{display:flex;align-items:center;gap:9px;font-weight:800;color:var(--ink);font-size:16px;}
+  .foot-links{display:flex;gap:18px;flex-wrap:wrap;}
+  .foot-links a:hover{color:var(--brand);}
+  .foot-note{margin-top:16px;font-size:13px;color:#8a95a8;line-height:1.8;}
+
+  @media (max-width:900px){
+    .hero-grid{grid-template-columns:1fr;gap:26px;}
+    .hero-art{order:2;}
+    h1{font-size:31px;}
+    .cards,.guide{grid-template-columns:repeat(2,1fr);}
+  }
+  @media (max-width:640px){
+    body{font-size:15.5px;}
+    .head-inner{flex-wrap:wrap;padding:10px 16px;gap:8px;}
+    nav.main{margin-left:0;order:3;width:100%;overflow-x:auto;flex-wrap:nowrap;padding-bottom:4px;}
+    nav.main a{padding:6px 9px;font-size:14px;white-space:nowrap;}
+    .hero{padding:28px 0 20px;}
+    h1{font-size:27px;}
+    .hero p.lead{font-size:15.5px;}
+    .cards,.guide{grid-template-columns:1fr;}
+    section{padding:26px 0;}
+    h2{font-size:20px;}
+    .closing{padding:26px 20px;}
+    .filter-bar{padding:14px;}
+  }
+</style>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<header class="site">
+  <div class="head-inner">
+    <a class="logo" href="#top" aria-label="风车动漫 首页">
+      <svg width="34" height="34" viewBox="0 0 64 64" role="img" aria-hidden="true">
+        <circle cx="32" cy="32" r="30" fill="#eaf0ff"/>
+        <path d="M32 32 L32 8 A24 24 0 0 1 56 32 Z" fill="#2f6fed"/>
+        <path d="M32 32 L56 32 A24 24 0 0 1 32 56 Z" fill="#ff8a3d"/>
+        <path d="M32 32 L32 56 A24 24 0 0 1 8 32 Z" fill="#2f6fed"/>
+        <path d="M32 32 L8 32 A24 24 0 0 1 32 8 Z" fill="#ff8a3d"/>
+        <circle cx="32" cy="32" r="5.5" fill="#1d2433"/>
+      </svg>
+      <span class="logo-text">风车动漫</span>
+    </a>
+    <nav class="main" aria-label="主导航">
+      <a href="#new">新番速览</a>
+      <a href="#library">分类找番</a>
+      <a href="#howto">追番方式</a>
+      <a href="#faq">常见问题</a>
+      <a href="#closing">开始追番</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="badge">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v18M3 12h18"/></svg>
+          按季度更新的追番入口
+        </span>
+        <h1>风车动漫</h1>
+        <p class="lead">风车动漫把新番、经典番剧与剧场版放在同一处入口：按季度、类型和热度浏览，选好想看的作品就能直接进入观看页，持续追更不必东翻西找。</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="#new">
+            浏览本季新番
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a class="btn btn-ghost" href="#library">按类型找番</a>
+        </div>
+      </div>
+      <figure class="hero-art" style="margin:0;">
+        <svg viewBox="0 0 360 240" role="img" aria-label="风车与屏幕组成的动漫观看示意插画">
+          <rect x="0" y="0" width="360" height="240" rx="18" fill="#ffffff" opacity="0.6"/>
+          <rect x="30" y="46" width="196" height="128" rx="12" fill="#1d2433"/>
+          <rect x="42" y="58" width="172" height="104" rx="8" fill="#2f6fed" opacity="0.18"/>
+          <path d="M118 88 L118 132 L158 110 Z" fill="#2f6fed"/>
+          <rect x="42" y="166" width="172" height="8" rx="4" fill="#ff8a3d" opacity="0.5"/>
+          <rect x="42" y="166" width="96" height="8" rx="4" fill="#ff8a3d"/>
+          <g transform="translate(286,104)">
+            <circle cx="0" cy="0" r="6" fill="#1d2433"/>
+            <path d="M0 0 L0 -52 A52 52 0 0 1 52 0 Z" fill="#2f6fed" opacity="0.9"/>
+            <path d="M0 0 L52 0 A52 52 0 0 1 0 52 Z" fill="#ff8a3d" opacity="0.9"/>
+            <path d="M0 0 L0 52 A52 52 0 0 1 -52 0 Z" fill="#2f6fed" opacity="0.6"/>
+            <path d="M0 0 L-52 0 A52 52 0 0 1 0 -52 Z" fill="#ff8a3d" opacity="0.6"/>
+          </g>
+          <path d="M286 156 L286 200" stroke="#1d2433" stroke-width="6" stroke-linecap="round"/>
+        </svg>
+        <figcaption>新番、番剧与剧场版，同一个入口进入观看</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section id="new">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <h2>新番速览</h2>
+          <p>当前季度的作品按更新节奏排列，点击卡片可查看作品简介与播出状态，再决定是否加入追番列表。</p>
+        </div>
+        <a class="more" href="#library">查看全部类型 →</a>
+      </div>
+      <div class="cards">
+        <article class="card">
+          <span class="tag">本季新番</span>
+          <h3>原创奇幻长篇</h3>
+          <p>每周固定更新的原创故事，以世界观设定和角色成长为主线，适合喜欢长线剧情的观众从头追起。</p>
+          <div class="meta">更新频率：每周一集 · 状态：连载中</div>
+        </article>
+        <article class="card">
+          <span class="tag orange">剧场版</span>
+          <h3>剧场版合集</h3>
+          <p>时长完整、剧情独立的剧场作品，适合一次看完；部分作品与电视版共享世界观，可先看正篇再补剧场版。</p>
+          <div class="meta">观看方式：单片完整 · 状态：可观看</div>
+        </article>
+        <article class="card">
+          <span class="tag">经典补番</span>
+          <h3>完结番剧回顾</h3>
+          <p>已经完结、口碑稳定的作品集中在此，适合不想等更新、希望一口气看完的观众按类型挑选。</p>
+          <div class="meta">集数：已完结 · 状态：全篇可看</div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="library">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <h2>分类找番</h2>
+          <p>输入作品名或选择类型，快速缩小范围。筛选只作用于下方列表，不会跳转页面。</p>
+        </div>
+      </div>
+
+      <div class="filter-bar">
+        <label for="searchInput">搜索作品</label>
+        <input id="searchInput" type="search" placeholder="输入作品名关键词，例如：奇幻、日常、剧场版" autocomplete="off">
+        <div class="chips" role="group" aria-label="按类型筛选">
+          <button class="chip active" type="button" data-cat="全部">全部</button>
+          <button class="chip" type="button" data-cat="奇幻">奇幻</button>
+          <button class="chip" type="button" data-cat="日常">日常</button>
+          <button class="chip" type="button" data-cat="剧场版">剧场版</button>
+          <button class="chip" type="button" data-cat="完结">完结</button>
+        </div>
+      </div>
+
+      <div class="cards" id="libList">
+        <article class="card" data-cat="奇幻" data-name="原创奇幻长篇 世界观 连载">
+          <span class="tag">奇幻</span>
+          <h3>原创奇幻长篇</h3>
+          <p>架空的王国与冒险者设定，剧情围绕一支小队展开，适合按顺序连续观看。</p>
+          <div class="meta">连载中 · 每周更新</div>
+        </article>
+        <article class="card" data-cat="日常" data-name="校园日常 治愈 群像">
+          <span class="tag">日常</span>
+          <h3>校园日常群像</h3>
+          <p>单元式叙事，每集独立成篇，随时可以挑一集观看，适合碎片时间放松。</p>
+          <div class="meta">连载中 · 单元剧</div>
+        </article>
+        <article class="card" data-cat="剧场版" data-name="剧场版合集 单片 完整">
+          <span class="tag orange">剧场版</span>
+          <h3>剧场版合集</h3>
+          <p>独立完整的故事，单次观看即可，不依赖电视版前情。</p>
+          <div class="meta">单片可看 · 时长完整</div>
+        </article>
+        <article class="card" data-cat="完结" data-name="完结番剧回顾 全篇 补番">
+          <span class="tag">完结</span>
+          <h3>完结番剧回顾</h3>
+          <p>全篇已完结，适合按集数顺序补完，不必等待后续更新。</p>
+          <div class="meta">已完结 · 全篇可看</div>
+        </article>
+        <article class="card" data-cat="奇幻" data-name="异世界冒险 成长 战斗">
+          <span class="tag">奇幻</span>
+          <h3>异世界冒险线</h3>
+          <p>以成长与战斗为核心的冒险故事，节奏偏快，适合偏好热血题材的观众。</p>
+          <div class="meta">连载中 · 每周更新</div>
+        </article>
+        <article class="card" data-cat="日常" data-name="治愈短篇 生活 轻松">
+          <span class="tag">日常</span>
+          <h3>治愈短篇集</h3>
+          <p>篇幅短、情绪轻，每集围绕一个生活片段，适合在通勤或睡前一集一集看。</p>
+          <div class="meta">连载中 · 短篇结构</div>
+        </article>
+      </div>
+      <p class="empty-note" id="emptyNote">没有匹配的作品，试试更短的关键词或切换到“全部”类型。</p>
+    </div>
+  </section>
+
+  <section id="howto">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <h2>追番方式</h2>
+          <p>风车动漫的使用路径可以拆成三步，先确定题材，再确认状态，最后按更新节奏安排观看。</p>
+        </div>
+      </div>
+      <div class="guide">
+        <article>
+          <div class="num">1</div>
+          <h3>先定类型与季度</h3>
+          <p>从分类入口进入，选择奇幻、日常或剧场版等题材，再结合季度筛选，缩小到几部候选作品。</p>
+        </article>
+        <article>
+          <div class="num">2</div>
+          <h3>确认连载或完结</h3>
+          <p>连载作品适合按周跟进，完结作品适合连续观看。卡片上的状态标记可以帮助判断是否要等更新。</p>
+        </article>
+        <article>
+          <div class="num">3</div>
+          <h3>建立自己的追番顺序</h3>
+          <p>把正在追的连载与准备补的完结作品分开记录，按播出日安排时间，避免同时开太多部而跟不上进度。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <h2>常见问题</h2>
+          <p>关于找番、追更和观看顺序的几个高频疑问，先看这里可以减少反复查找。</p>
+        </div>
+      </div>
+      <div class="faq">
+        <details open>
+          <summary>风车动漫适合从哪一类作品开始看？</summary>
+          <p>如果只是想试试，可以先看剧场版合集，单片时长完整、剧情独立；如果喜欢连续剧情，再从奇幻类的连载作品开始，按集顺序观看即可。</p>
+        </details>
+        <details>
+          <summary>新番和完结番剧有什么区别？</summary>
+          <p>新番按周更新，需要跟着播出节奏追；完结番剧全篇已放出，可以一次看完。两者在分类列表中都有独立标记，方便按自己的时间安排选择。</p>
+        </details>
+        <details>
+          <summary>如何在风车动漫快速找到想看的作品？</summary>
+          <p>在分类区输入作品名或题材关键词，再配合类型按钮筛选。搜索与筛选都在当前页面完成，结果会直接显示在下方列表中。</p>
+        </details>
+        <details>
+          <summary>剧场版需要先看电视版吗？</summary>
+          <p>多数剧场版剧情独立，可以直接观看；少数与电视版共享世界观的作品，先看正篇会更容易理解人物关系，卡片简介中会作区分说明。</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section id="closing">
+    <div class="wrap">
+      <div class="closing">
+        <div>
+          <h2>从这一季开始，把想看的番追完</h2>
+          <p>风车动漫把新番速览、分类找番与追番方式放在同一页，选好题材与状态，就能确定这个季度看什么、按什么顺序看。</p>
+        </div>
+        <a class="btn btn-primary" href="#new">回到新番速览</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-inner">
+      <div>
+        <div class="foot-brand">
+          <svg width="24" height="24" viewBox="0 0 64 64" aria-hidden="true">
+            <circle cx="32" cy="32" r="30" fill="#eaf0ff"/>
+            <path d="M32 32 L32 8 A24 24 0 0 1 56 32 Z" fill="#2f6fed"/>
+            <path d="M32 32 L56 32 A24 24 0 0 1 32 56 Z" fill="#ff8a3d"/>
+            <path d="M32 32 L32 56 A24 24 0 0 1 8 32 Z" fill="#2f6fed"/>
+            <path d="M32 32 L8 32 A24 24 0 0 1 32 8 Z" fill="#ff8a3d"/>
+            <circle cx="32" cy="32" r="5.5" fill="#1d2433"/>
+          </svg>
+          风车动漫
+        </div>
+        <p class="foot-note">风车动漫是面向动漫爱好者的在线观看与追番入口，内容按题材与季度分类整理，帮助观众更快找到想看的作品。</p>
+      </div>
+      <nav class="foot-links" aria-label="页尾导航">
+        <a href="#new">新番速览</a>
+        <a href="#library">分类找番</a>
+        <a href="#howto">追番方式</a>
+        <a href="#faq">常见问题</a>
+      </nav>
+    </div>
+    <p class="foot-note">© 风车动漫 · 页面内容仅用于浏览与选番，作品信息以实际播出情况为准。</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var input = document.getElementById('searchInput');
+  var chips = Array.prototype.slice.call(document.querySelectorAll('.chip'));
+  var cards = Array.prototype.slice.call(document.querySelectorAll('#libList .card'));
+  var empty = document.getElementById('emptyNote');
+  var currentCat = '全部';
+
+  function apply(){
+    var q = (input.value || '').trim().toLowerCase();
+    var shown = 0;
+    cards.forEach(function(card){
+      var cat = card.getAttribute('data-cat') || '';
+      var text = (card.getAttribute('data-name') || '') + ' ' + card.textContent;
+      var okCat = currentCat === '全部' || cat === currentCat;
+      var okText = !q || text.toLowerCase().indexOf(q) !== -1;
+      var ok = okCat && okText;
+      card.style.display = ok ? '' : 'none';
+      if(ok) shown++;
+    });
+    empty.style.display = shown ? 'none' : 'block';
+  }
+
+  input.addEventListener('input', apply);
+
+  chips.forEach(function(chip){
+    chip.addEventListener('click', function(){
+      chips.forEach(function(c){ c.classList.remove('active'); });
+      chip.classList.add('active');
+      currentCat = chip.getAttribute('data-cat');
+      apply();
+    });
+  });
+})();
+</script>
+
+</body>
+  </html>
