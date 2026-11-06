@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>天堂电影下载 迅雷-迅雷磁力链接下载_高清电影资源获取</title>
+<meta name="description" content="天堂电影下载 迅雷主题首页，介绍如何通过迅雷获取高清电影资源，说明磁力链接、BT种子与迅雷离线下载的配合方式，并给出资源筛选与下载管理的实用要点。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230d1b2a'/%3E%3Cpath d='M32 14l4 12h12l-9.7 7.6 3.7 12L32 38l-10 7.6 3.7-12L16 26h12z' fill='%23ffb703'/%3E%3C/svg%3E">
+<style>
+:root{
+  --ink:#0d1b2a;
+  --ink-2:#16283d;
+  --paper:#f6f7f9;
+  --card:#ffffff;
+  --gold:#ffb703;
+  --gold-deep:#e08e00;
+  --blue:#2f6fb3;
+  --line:#e2e6ec;
+  --muted:#5a6a7d;
+  --radius:14px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:"PingFang SC","Microsoft YaHei","Hiragino Sans GB",system-ui,-apple-system,"Segoe UI",sans-serif;
+  font-size:16px;
+  line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:var(--blue);text-decoration:none}
+a:hover{text-decoration:underline}
+h1,h2,h3{line-height:1.35;margin:0}
+.wrap{width:min(1120px,92vw);margin:0 auto}
+
+/* 页头 */
+header.site{
+  background:var(--ink);
+  color:#fff;
+  position:sticky;top:0;z-index:50;
+  border-bottom:3px solid var(--gold);
+}
+.header-in{
+  display:flex;align-items:center;justify-content:space-between;
+  gap:18px;padding:14px 0;flex-wrap:wrap;
+}
+.brand{display:flex;align-items:center;gap:10px;color:#fff}
+.brand svg{flex:0 0 auto}
+.brand-name{
+  font-size:19px;font-weight:700;letter-spacing:.5px;
+  color:#fff;
+}
+nav.mainnav{display:flex;gap:6px;flex-wrap:wrap}
+nav.mainnav a{
+  color:#cfd9e4;font-size:14.5px;padding:7px 12px;border-radius:8px;
+}
+nav.mainnav a:hover{background:rgba(255,255,255,.09);color:#fff;text-decoration:none}
+
+/* 首屏 */
+.hero{
+  background:
+    radial-gradient(900px 380px at 85% -10%, rgba(255,183,3,.18), transparent 60%),
+    linear-gradient(160deg,#0d1b2a 0%,#16283d 100%);
+  color:#fff;
+  padding:54px 0 46px;
+}
+.hero-grid{display:grid;grid-template-columns:1.35fr .9fr;gap:36px;align-items:center}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:13px;color:var(--gold);letter-spacing:1px;
+  border:1px solid rgba(255,183,3,.45);border-radius:999px;
+  padding:4px 12px;margin-bottom:18px;
+}
+h1{
+  font-size:clamp(26px,4vw,40px);
+  font-weight:800;letter-spacing:.5px;color:#fff;
+}
+.hero p.lead{
+  color:#c7d3e0;font-size:16.5px;margin:16px 0 26px;max-width:36em;
+}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+.btn{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:12px 22px;border-radius:10px;font-weight:700;font-size:15px;
+  border:1px solid transparent;
+}
+.btn-primary{background:var(--gold);color:#231a00}
+.btn-primary:hover{background:#ffc733;text-decoration:none}
+.btn-ghost{border-color:rgba(255,255,255,.35);color:#fff}
+.btn-ghost:hover{background:rgba(255,255,255,.1);text-decoration:none}
+.btn[aria-disabled="true"]{opacity:.92;cursor:not-allowed;pointer-events:none}
+
+.hero-card{
+  background:rgba(255,255,255,.06);
+  border:1px solid rgba(255,255,255,.14);
+  border-radius:var(--radius);
+  padding:20px;
+}
+.hero-card h2{font-size:15px;color:var(--gold);letter-spacing:.5px;margin-bottom:6px}
+.hero-card ul{margin:0;padding-left:18px;color:#cbd6e2;font-size:14px}
+.hero-card li{margin:6px 0}
+
+/* 通用区块 */
+section{padding:52px 0}
+.sec-head{margin-bottom:26px;max-width:46em}
+.sec-head h2{font-size:clamp(21px,2.6vw,27px);font-weight:800}
+.sec-head p{color:var(--muted);margin:10px 0 0;font-size:15.5px}
+.kicker{
+  display:inline-block;font-size:12.5px;font-weight:700;letter-spacing:2px;
+  color:var(--gold-deep);margin-bottom:8px;
+}
+
+/* 步骤 */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.step{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  padding:22px;box-shadow:0 2px 10px rgba(13,27,42,.04);
+}
+.step .num{
+  width:34px;height:34px;border-radius:9px;background:var(--ink);color:var(--gold);
+  display:flex;align-items:center;justify-content:center;font-weight:800;font-size:15px;
+  margin-bottom:12px;
+}
+.step h3{font-size:16.5px;margin-bottom:8px}
+.step p{margin:0;font-size:14.8px;color:#3d4c5e}
+
+/* 资源卡片 */
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  overflow:hidden;display:flex;flex-direction:column;
+  box-shadow:0 2px 10px rgba(13,27,42,.04);
+}
+.card .poster{
+  aspect-ratio:16/9;background:linear-gradient(135deg,#16283d,#25415f);
+  display:flex;align-items:center;justify-content:center;
+}
+.card .poster span{color:rgba(255,255,255,.85);font-size:13px;letter-spacing:1px}
+.card .body{padding:16px 18px 18px;flex:1;display:flex;flex-direction:column;gap:8px}
+.card h3{font-size:16px}
+.card p{margin:0;font-size:14.3px;color:#44536a;flex:1}
+.tags{display:flex;gap:6px;flex-wrap:wrap}
+.tag{
+  font-size:12px;padding:2px 9px;border-radius:999px;
+  background:#eef2f7;color:#3d5470;border:1px solid #e0e7f0;
+}
+.tag.gold{background:#fff5df;color:#8a5a00;border-color:#f5dfb0}
+
+/* 要点列表 */
+.points{display:grid;grid-template-columns:1fr 1fr;gap:16px 28px;margin-top:6px}
+.point{display:flex;gap:12px;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 18px}
+.point svg{flex:0 0 auto;margin-top:3px}
+.point h3{font-size:15.5px;margin-bottom:4px}
+.point p{margin:0;font-size:14.4px;color:#44536a}
+
+/* 表格 */
+.table-box{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);overflow:auto}
+table{width:100%;border-collapse:collapse;font-size:14.6px;min-width:520px}
+th,td{padding:13px 16px;text-align:left;border-bottom:1px solid var(--line)}
+th{background:#f1f4f8;font-size:13.5px;color:#37485c;letter-spacing:.5px}
+tr:last-child td{border-bottom:none}
+
+/* 问答 */
+.faq details{
+  background:var(--card);border:1px solid var(--line);border-radius:12px;
+  padding:14px 18px;margin-bottom:12px;
+}
+.faq summary{
+  cursor:pointer;font-weight:700;font-size:15.4px;list-style:none;
+  display:flex;justify-content:space-between;gap:14px;align-items:center;
+}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";color:var(--gold-deep);font-size:20px;font-weight:400}
+.faq details[open] summary::after{content:"–"}
+.faq p{margin:10px 0 0;font-size:14.6px;color:#44536a}
+
+/* 提示条 */
+.notice{
+  background:#fff9ec;border:1px solid #f3dfb2;border-radius:12px;
+  padding:16px 20px;font-size:14.5px;color:#5c4405;
+}
+.notice strong{color:#3f2f00}
+
+/* 页尾 */
+footer.site{background:var(--ink);color:#a9b8c8;padding:34px 0 26px;font-size:14px}
+.footer-in{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;align-items:flex-start}
+footer.site .brand-name{font-size:16px;color:#fff}
+footer.site p{margin:8px 0 0;max-width:42em;font-size:13.6px;color:#8fa1b4}
+.footer-links{display:flex;gap:16px;flex-wrap:wrap}
+.footer-links a{color:#c8d5e2;font-size:13.6px}
+
+@media (max-width:900px){
+  .hero-grid{grid-template-columns:1fr}
+  .steps,.cards{grid-template-columns:1fr 1fr}
+  .points{grid-template-columns:1fr}
+}
+@media (max-width:640px){
+  body{font-size:15.5px}
+  .header-in{padding:12px 0;gap:10px}
+  nav.mainnav{gap:2px}
+  nav.mainnav a{font-size:13.5px;padding:6px 9px}
+  .hero{padding:36px 0 32px}
+  section{padding:38px 0}
+  .steps,.cards{grid-template-columns:1fr}
+  .btn{width:100%;justify-content:center}
+  .hero-actions{flex-direction:column;align-items:stretch}
+}
+</style>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap header-in">
+    <div class="brand">
+      <svg width="34" height="34" viewBox="0 0 64 64" aria-hidden="true">
+        <rect width="64" height="64" rx="14" fill="#16283d" stroke="#ffb703" stroke-width="2"/>
+        <path d="M32 13l4.4 12.6H50l-10.3 7.9 3.9 12.6L32 38.4l-11.6 7.7 3.9-12.6L14 25.6h13.6z" fill="#ffb703"/>
+      </svg>
+      <span class="brand-name">天堂电影下载 迅雷</span>
+    </div>
+    <nav class="mainnav" aria-label="主导航">
+      <a href="#flow">下载流程</a>
+      <a href="#picks">资源分类</a>
+      <a href="#tips">下载要点</a>
+      <a href="#compare">格式对比</a>
+      <a href="#faq">常见疑问</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow">迅雷磁力 · 高清资源</span>
+        <h1>天堂电影下载 迅雷</h1>
+        <p class="lead">围绕“天堂电影下载 迅雷”这一需求，把资源查找、磁力链接与 BT 种子识别、迅雷下载任务的建立与管理串成一条清晰路径，帮助你把想要的高清影片稳妥地存到本地。</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#flow">查看下载流程</a>
+          <a class="btn btn-ghost" href="#picks">浏览资源分类</a>
+        </div>
+      </div>
+      <aside class="hero-card">
+        <h2>开始前确认三件事</h2>
+        <ul>
+          <li>迅雷客户端已安装并登录账号</li>
+          <li>下载目录预留足够磁盘空间</li>
+          <li>链接来源可靠，文件名与影片一致</li>
+        </ul>
+      </aside>
+    </div>
+  </section>
+
+  <section id="flow">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="kicker">下载流程</span>
+        <h2>从找到资源到完成天堂电影下载 迅雷任务</h2>
+        <p>很多人卡在第一步：拿到了链接却不知道该怎么交给迅雷。下面三步把最常见的操作顺序说清楚，按顺序执行即可。</p>
+      </div>
+      <div class="steps">
+        <div class="step">
+          <div class="num">1</div>
+          <h3>确认链接类型</h3>
+          <p>资源页通常给出磁力链接（以 magnet:?xt=urn:btih 开头）或 BT 种子文件。磁力链接直接复制即可，种子文件需要先保存到本地。两者都能在天堂电影下载 迅雷时使用。</p>
+        </div>
+        <div class="step">
+          <div class="num">2</div>
+          <h3>交给迅雷建立任务</h3>
+          <p>复制磁力链接后，迅雷一般会自动识别剪贴板并弹出新建任务窗口；也可点击“新建”手动粘贴。导入种子文件则通过“打开种子文件”完成，随后勾选需要的文件。</p>
+        </div>
+        <div class="step">
+          <div class="num">3</div>
+          <h3>设置目录后开始</h3>
+          <p>在任务窗口内指定保存路径，确认文件列表后点击下载。下载中可在任务列表查看进度、速度与剩余时间，天堂电影下载 迅雷的体验很大程度取决于这一步的选择。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="picks">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="kicker">资源分类</span>
+        <h2>按类型挑选适合迅雷下载的影片</h2>
+        <p>不同片种对画质与体积的要求不同。以下分类只说明挑选思路，具体资源以你实际获取的链接为准。</p>
+      </div>
+      <div class="cards">
+        <article class="card">
+          <div class="poster"><span>剧情长片</span></div>
+          <div class="body">
+            <h3>剧情 / 文艺片</h3>
+            <p>画质优先，1080p 与 4K 版本差异明显。此类影片节奏慢，适合一次下载完整版本后本地观看，避免边下边播卡顿。</p>
+            <div class="tags"><span class="tag gold">1080p 优先</span><span class="tag">体积较大</span></div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="poster"><span>动作视效</span></div>
+          <div class="body">
+            <h3>动作 / 视效大片</h3>
+            <p>码率高、音轨多，文件常达数 GB。使用天堂电影下载 迅雷时建议先看文件清单，按需取消不需要的音轨与字幕包。</p>
+            <div class="tags"><span class="tag gold">高码率</span><span class="tag">多音轨</span></div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="poster"><span>剧集合集</span></div>
+          <div class="body">
+            <h3>剧集 / 系列合集</h3>
+            <p>整季打包的种子文件包含多集，导入后可在任务中勾选单集。分批下载更利于控制空间，也方便逐集观看。</p>
+            <div class="tags"><span class="tag">整季打包</span><span class="tag">可勾选</span></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="tips">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="kicker">下载要点</span>
+        <h2>让天堂电影下载 迅雷更顺利的四个习惯</h2>
+        <p>下载速度与成功率，往往由一些细节决定。下面几点是实际操作中最容易被忽略的部分。</p>
+      </div>
+      <div class="points">
+        <div class="point">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#e08e00" stroke-width="2" stroke-linecap="round"><path d="M12 3v12"/><path d="M6 11l6 6 6-6"/><path d="M4 21h16"/></svg>
+          <div>
+            <h3>核对文件名与大小</h3>
+            <p>创建任务前先看文件大小是否与影片时长匹配。明显偏小的文件多为低清转码或无关内容，及时更换链接可省下大量时间。</p>
+          </div>
+        </div>
+        <div class="point">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#e08e00" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+          <div>
+            <h3>避开高峰时段</h3>
+            <p>晚间热门时段源节点拥挤，速度波动大。把天堂电影下载 迅雷的大体积任务安排在空闲时段，通常更稳定。</p>
+          </div>
+        </div>
+        <div class="point">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#e08e00" stroke-width="2" stroke-linecap="round"><path d="M3 7h18v11H3z"/><path d="M7 12h4"/></svg>
+          <div>
+            <h3>设置独立下载目录</h3>
+            <p>为影片单独建一个文件夹，避免与系统盘文件混杂。空间不足时也便于整体迁移或清理。</p>
+          </div>
+        </div>
+        <div class="point">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#e08e00" stroke-width="2" stroke-linecap="round"><path d="M12 3l8 4v6c0 5-3.5 7.5-8 8-4.5-.5-8-3-8-8V7z"/></svg>
+          <div>
+            <h3>留意来源可靠性</h3>
+            <p>只从可信页面获取链接，陌生链接附带的额外文件一律取消勾选，减少无关内容混入下载任务。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="compare">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="kicker">格式对比</span>
+        <h2>磁力链接与种子文件怎么选</h2>
+        <p>两种形式都能用于天堂电影下载 迅雷，差别主要在获取方式与后续维护。</p>
+      </div>
+      <div class="table-box">
+        <table>
+          <thead>
+            <tr><th>对比项</th><th>磁力链接</th><th>BT 种子文件</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>获取方式</td><td>复制一串文本链接</td><td>下载 .torrent 文件</td></tr>
+            <tr><td>建立任务</td><td>粘贴后迅雷自动识别</td><td>通过“打开种子文件”导入</td></tr>
+            <tr><td>文件清单</td><td>解析后显示，可勾选</td><td>导入即显示，可勾选</td></tr>
+            <tr><td>适合场景</td><td>临时下载、跨设备传链接</td><td>长期保存、重复使用</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="margin-top:16px;color:#5a6a7d;font-size:14.5px">无论采用哪种形式，都建议在任务开始前确认文件列表。天堂电影下载 迅雷的过程中，清单核对是最省事的一步。</p>
+    </div>
+  </section>
+
+  <section id="faq">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="kicker">常见疑问</span>
+        <h2>关于天堂电影下载 迅雷的常见问题</h2>
+      </div>
+      <div class="faq">
+        <details open>
+          <summary>复制磁力链接后迅雷没有反应怎么办？</summary>
+          <p>先检查迅雷是否在运行、剪贴板监控是否开启。若仍无反应，点击“新建任务”手动粘贴链接即可。部分链接需要完整复制，缺少末尾字符会导致解析失败。</p>
+        </details>
+        <details>
+          <summary>种子文件里有很多无关文件，能只下主片吗？</summary>
+          <p>可以。导入种子后任务窗口会列出全部文件，取消勾选不需要的项，再开始下载。这样能显著减少占用空间，也让天堂电影下载 迅雷的任务更干净。</p>
+        </details>
+        <details>
+          <summary>下载中途速度变慢是什么原因？</summary>
+          <p>常见原因是源节点减少或网络占用升高。可暂停后重新开始，或换个时段继续。速度还受本地上行带宽影响，做种分享较多时通常更稳定。</p>
+        </details>
+        <details>
+          <summary>下载完成的文件无法播放怎么处理？</summary>
+          <p>先确认文件是否完整下载，再检查播放器是否支持该封装格式。MKV 封装可换用支持多音轨的播放器，字幕文件需与影片放在同一目录并同名。</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="wrap">
+      <div class="notice">
+        <strong>使用提示：</strong>请仅下载你拥有合法观看权限的内容，并遵守所在地的相关规定。本页介绍的是天堂电影下载 迅雷的一般操作方式，不提供任何具体影片资源地址。
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site">
+  <div class="wrap footer-in">
+    <div>
+      <span class="brand-name">天堂电影下载 迅雷</span>
+      <p>一个围绕天堂电影下载 迅雷操作路径的主题页面，整理链接识别、任务建立、目录设置与常见问题的处理思路，帮助你把下载流程走完整。</p>
+    </div>
+    <div class="footer-links">
+      <a href="#flow">下载流程</a>
+      <a href="#picks">资源分类</a>
+      <a href="#tips">下载要点</a>
+      <a href="#compare">格式对比</a>
+      <a href="#faq">常见疑问</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
